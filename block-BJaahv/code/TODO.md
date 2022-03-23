@@ -113,7 +113,6 @@ class UserData {
     return this.noOfProjects;
   }
   changeName(newName){
-    // this.name = newName;
     return this.name;
   }
   incrementProject(){
@@ -122,6 +121,6 @@ class UserData {
   decrementProject(){
     return this.noOfProject--;
   }
-}
+};
 
 ```
