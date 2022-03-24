@@ -98,7 +98,7 @@ class user{
   sayHello(){
     alert(`welcome ${this.name}`)
   }
-}
+};
 
 ```
 
