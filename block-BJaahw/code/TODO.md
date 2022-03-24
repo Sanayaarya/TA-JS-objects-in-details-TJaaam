@@ -67,7 +67,7 @@ createUser.prototype = {
   sayHello: function(){
     alert(`welcome ${this.name}`);
   }
-}
+};
 
 ```
 
