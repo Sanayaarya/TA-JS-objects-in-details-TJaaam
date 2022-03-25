@@ -119,7 +119,7 @@ class Square {
 ```
 
 - Create two instance of the `Square` class (ex: `let s1 = new Square(6);`)
-
+  
 ```js
 
 let sq1 = new Square(77);
@@ -155,7 +155,7 @@ class User( firstName, lastName){
         this.lastName = lastName;
     }
     get fulName(){
-        return this.firstName + this.lastName;
+        return `${this.firstName} + ${this.lastName}`;
     }
 };
 ```
@@ -169,16 +169,53 @@ class User( firstName, lastName){
         this.firstName = firstName;
         this.lastName = lastName;
     }
-    set fulName(a,b){
-        
+    get fullName(){
+      return `${this.firstName} ${this.lastName}`
     }
-}
+    set fulName(a,b){
+        if(name.length){
+          alert(`full name should be more than 5 characters`)
+        } else{
+          let firstName = name.split(' ')[0];
+          let lastName = name.split (' ')[1];
+          this.firstName = firstName;
+          this.lastName = lastName
+        }
+      }
+    }
 
 ```
 
 
 - Create a method named `nameContains` which will accept string and will return `true` or `false` based on if the name of the user contains the text that passed by user.
 
+```js
+
+class User( firstName, lastName){
+    constructor( firstName, lastName ){
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+    get fullName(){
+      return `${this.firstName} ${this.lastName}`
+    }
+    set fulName(a,b){
+        if(name.length){
+          alert(`full name should be more than 5 characters`)
+        } else{
+          let firstName = name.split(' ')[0];
+          let lastName = name.split (' ')[1];
+          this.firstName = firstName;
+          this.lastName = lastName
+        }
+      }
+      nameContains(str){
+        return `${this.firstName} ${this.lastName}`.contains(str);
+      }
+    }
+
+```
+  
 - Create two instance of the `User` class
 
 ```js
