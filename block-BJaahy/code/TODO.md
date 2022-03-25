@@ -141,7 +141,7 @@ class User( firstName, lastName){
         this.firstName = firstName;
         this.lastName = lastName;
     }
-}
+};x
 
 ```
 
@@ -157,7 +157,7 @@ class User( firstName, lastName){
     get fulName(){
         return this.firstName + this.lastName;
     }
-}
+};
 ```
 
 - Create a `fullName` setter method that will accept full name parameter of the person. It will update the `firstName` and `lastName` based on the input. (Say if the user passed `Arya Stark` it will update the `firstName` to `Arya` and `lastName` to `Stark`. It will also change one condition if the length of the name passed is less than 5 characters it will alert a message saying `Full name should be more than 5 characters`)
