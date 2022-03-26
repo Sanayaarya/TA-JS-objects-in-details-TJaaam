@@ -212,7 +212,7 @@ class User( firstName, lastName){
       nameContains(str){
         return `${this.firstName} ${this.lastName}`.contains(str);
       }
-    }
+    };
 
 ```
   
