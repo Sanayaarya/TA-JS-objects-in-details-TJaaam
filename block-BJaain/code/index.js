@@ -1,17 +1,21 @@
-console.log(this.document === document); // Output
+console.log(this.document === document); // Output 
 
 // ------------
+true
 
 console.log(this === window); //Output
 
 // ------------
+true
 
 var myFunction = function () {
   console.log(this);
 };
-myFunction(); // Output
+myFunction(); // Output 
 
 // ------------
+
+window
 
 function f1() {
   'use strict';
@@ -20,6 +24,8 @@ function f1() {
 console.log(f1() === window); //Output
 
 // ------------
+
+false
 
 function foo() {
   console.log('Simple function call');
@@ -30,6 +36,8 @@ foo(); //Output ??
 
 // ------------
 
+true
+
 // This for IIFE
 (function () {
   console.log('Anonymous function invocation');
@@ -38,13 +46,16 @@ foo(); //Output ??
 
 // ------------
 
+true
+
 var myObject = {};
 myObject.someMethod = function () {
   console.log(this);
 };
-myObject.someMethod(); //Value Of This
+myObject.someMethod(); //Value Of This undefined
 
 // ------------
+
 
 function Person(fn, ln) {
   this.firstName = fn;
@@ -55,11 +66,12 @@ function Person(fn, ln) {
   };
 }
 
-let person = new Person('John', 'Reed');
+var person = new Person('John', 'Reed');
 person.displayName(); // Output
-let person2 = new Person('Paul', 'Adams');
+'John','Reed'
+var person2 = new Person('Paul', 'Adams');
 person2.displayName(); // Output
-
+'Paul','Adams'
 // ------------
 
 function foo() {
@@ -77,9 +89,12 @@ let user = {
 };
 
 user.foo(); // Output
+False
 let fun1 = user.foo1;
 fun1(); // Output ??
+true
 user.foo1(); // Output ??
+false
 
 // ------------
 
@@ -98,7 +113,7 @@ retrieveX(); //Output ??
 
 var boundGetX = retrieveX.bind(obj);
 boundGetX(); // Output ??
-
+81
 // ------------
 
 function Person(fn, ln) {
@@ -258,10 +273,10 @@ let obj2 = {
 
 let getSecondData = obj2.printSecondData.bind(obj1);
 console.log(getSecondData()); // Output and why ???
-
+bob 
 // --------------
 
-const call = {
+var call = {
   caller: 'mom',
   says: function () {
     console.log(`Hey, ${this.caller} just called.`);
@@ -269,7 +284,7 @@ const call = {
 };
 
 call.says(); // output ???
-
+// Hey, mom just called.
 // -----------------
 
 const call = {
@@ -279,9 +294,10 @@ const call = {
   },
 };
 
-let newCall = call.says;
+var newCall = call.says;
 
 newCall(); // output ???
+ error
 
 //  -----------------
 
@@ -300,3 +316,4 @@ const call = {
 let newCall = call.anotherCaller;
 
 newCall(); // output ??
+error
