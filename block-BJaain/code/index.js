@@ -313,7 +313,7 @@ const call = {
   },
 };
 
-let newCall = call.anotherCaller;
+let newCall = call.anotherCaller
 
 newCall(); // output ??
 error
