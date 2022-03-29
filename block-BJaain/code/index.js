@@ -309,7 +309,7 @@ const call = {
   caller: 'mom',
   anotherCaller: anotherCaller,
   says: function () {
-    console.log(`Hey, ${this.caller} just called.`);
+    console.log(`Hey, ${this.caller} just called.`)
   },
 };
 
