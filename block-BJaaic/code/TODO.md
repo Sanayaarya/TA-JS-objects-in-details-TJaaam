@@ -17,6 +17,9 @@ Methods
 
 - `summary()` - returns `I live in ${location} and I have ${numberOfLegs}`
 
+let animal =
+
+
 #### Dog
 
 It will have all the properties and methods of the Animal. These are the extra properties and methods these dogs will have.
@@ -51,3 +54,4 @@ Methods:
 - `changeColorOfEyes(newColor)` - accepts the new color and updates the color of the dog
 
 - `summary()` - returns `I am ${name} and the color of my eyes are ${colorOfEyes}. I can also do meow meow`
+
