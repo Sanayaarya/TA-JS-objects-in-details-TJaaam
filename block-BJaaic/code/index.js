@@ -68,7 +68,7 @@ summary: function(){
 
 },
 
-}
+};
 
 Object.setPrototypeOf(dogMethods,animalMethods);
 Object.setPrototypeOf(catMethods,animalMethods);
