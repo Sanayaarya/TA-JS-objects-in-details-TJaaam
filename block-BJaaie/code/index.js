@@ -5,19 +5,35 @@ function  Createanimal(location,numberOfLegs){
   //  return animal;
 }
 
-Createanimal.prototype.changeLocation = function (newlocation ){
-  this.location = newlocation
-      alert(`I live in ${this.location} and I can eat`)
+Createanimal.prototype = {
+  eat: function (){
+    console.log(`I live in ${this.location} and I can eat`);
   },
-  eat = function(){
-    alert(`I live in ${location} and I can eat`)
-  }
-  summary =function(){
-   return `I live in ${location} and I have ${numberOfLegs}`
-  }
-  
+  changeLocation: function (newLocation){
+    this.location = newLocation;
+    return this.location;
+  },
+  summary: function(){
+    console.log(`I live in $ {this.location} and I have ${this.numbersofleges }`)
+  },
+};
 
-
+class Animal{
+  constructor(location,numberOfLegs){
+    this.location = location;
+    this.numberOfLegs = numberOfLegs;
+  }
+  eat(){
+    console.log(`I live in ${this.location} and I can eat`);
+  }
+  changeLocation(newLocation){
+    this.location = newLocation;
+    return this.location;
+  }
+  summary(){
+    console.log(`I live in $ {this.location} and I have ${this.numbersofleges }`)
+  }
+}
   function CreateDog( name, color ){
     CreateAnimal.apply(this,[location,numberOfLegs])
     this.name = name;
@@ -41,6 +57,28 @@ CreateDog.prototype ={
     }
 }
 
+class Dog extends Animal {
+  constructor(location, numberOfLegs , name ,color){
+    super(location, numberOfLegs);
+    this.name = name;
+    this.color = color;
+  }
+  bark(){
+    alert(`I am ${this.name} and I can bark 🐶`)
+}
+changeName(newName){
+    this.name = newName;
+    return this.name;
+}
+changeColor(newColor){
+    this.color = newColor;
+    return this.color;
+}
+summary(){
+    returns `I am ${this.name} and I am of ${this.color} color. I can also bark`
+}
+}
+
 function CreateCat( name, colorOfEye ){
     CreateAnimal.apply(this)
     this.name = name;
@@ -61,8 +99,32 @@ CreateCat.prototype = {
     },
     summary:function(){
         returns `I am ${this.name} and the color of my eyes are ${this.colorOfEyes}. I can also do meow meow`
-    }
-}
+    },
+};
 
 Object.setPrototypeOf(CreateCat.prototype,CreateAnimal.prototype);
 Object.setPrototypeOf(CreateDog.prototype,CreateAnimal.prototype);
+
+
+class Cat extends Animal {
+  constructor(location, numberOfLegs , name ,color){
+    super(location, numberOfLegs);
+    this.name = name;
+    this.colorOfEyes = this.colorOfEyes;
+  }
+  meow(){
+    alert(`I am ${this.name} and I can meow 🐶`)
+}
+changeName(newName){
+    this.name = newName;
+    return this.name;
+}
+changeColor(newColor){
+    this.colorOfEyes = newColor;
+    return this.colorOfEyes;
+}
+summary(){
+    returns `I am ${name} and the color of my eyes are ${colorOfEyes}. I can also do meow meow`
+
+}
+}
