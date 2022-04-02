@@ -48,6 +48,6 @@ console.log(new MainUser().sayHello()); // output / error Hello Tyrion
 console.log(new MainUser().sayHello.call(user2)); // output / error Hello Arya
 console.log(new MainUser().sayHello.call(user)); // output / error Hello John
 console.log(
-  new MainUser().sayHello.apply(user, ['Welcome!'])
+  new MainUser().sayHello.apply(user, ['Welcome!']);
 ); // output / error Welcome! John
 ```
