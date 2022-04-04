@@ -5,10 +5,19 @@
 
 // myMap function goes here
 
+Array.prototype.myMap = function(cb){
+  let final = [];
+  for(let i = 0 ; i < this.length; i++){
+     const element = this[i];
+     final.push(cb(element, i , this));
+  }
+  return final
+}
+
 // Test the myMap function you created above
 
 let numbers = [1, 5, 6, 8, 9];
-let words = 'quick brown fox jumped over a lazy dog'.split(
+let words = 'the quick brown fox jumps over a lazy dog'.split(
   ' '
 );
 let doubleNum = numbers.myMap(function (num) {
@@ -27,6 +36,18 @@ console.log(capitalWords); // it should be 'Quick Brown Fox Jumped Over A Lazy D
 2. Add a method named `myFilter` to Array.prototype. myFilter should behave similar to Array.filter.
 After adding the function test it using the code below.
 */
+
+
+
+Array.prototype.myFilter = function( fn ) {
+  let filtered = [];
+  for ( let i = 0 ; i < this.length ; i++ ) {
+    if ( fn( this[i] ) ) {
+      filtered.push( this[i] );
+    }
+  }
+  return filtered;
+}
 
 // You code goes here
 
@@ -48,6 +69,15 @@ new array and in the new array the index of the elements will be shuffled (rando
 Make sure it does not the changes the original array.
 
 */
+Array.prototype.shuffle = function(){
+  let final = [];
+  for ( let i = 0 ; i < this.length ; i++ ) {
+  setTimeout(()=>{
+      final.push(this[i])
+    }, Math.floor(Math.random() * 100))
+  }
+   return final;
+}
 
 // You code goes here
 
@@ -62,7 +92,14 @@ console.log(words.shuffle());
 new array and it should only contain unique elements in the array.
 Unique means no element should come multiple times.
 */
-
+Array.prototype.unique = function(){
+  return this.reduce((acc,cv)=>{
+  if (!acc.includes(cv)){
+    acc.push(cv)
+  }
+  return acc
+  },[])
+}
 // You code goes here
 
 // Test to check the shuffle method (It will return different output every time you call)
@@ -77,6 +114,15 @@ console.log(strings.unique()); // ['h', 'e', 'l', 'o', 'w', 'r', 'd']
 array that will contain only element that is common in both the array.
 */
 
+Array.prototype.intersection = function (arr){
+  return this.reduce((acc,cv)=>{
+if (arr.includes(cv) && !acc.includes(cv)){
+ acc.push(cv)
+}
+return acc
+  },[])
+}
+
 // You code goes here
 
 // Test to check the shuffle method (It will return different output every time you call)
@@ -88,6 +134,14 @@ console.log(strings.intersection('heyworld'.split(''))); // ['h', 'e', 'o', 'w',
 and split the array into groups the length of size. If array can't be split evenly, the final
 chunk will be the remaining elements. `length` should default to 1.
 */
+
+Array.prototype.chunk = function(a=1){
+  let arr =[];
+  for(let i=0; i<this.length/2; i){
+    arr.push (this.splice(i,a))
+  }return arr
+  
+  }
 
 // You code goes here
 
