@@ -41,14 +41,14 @@ class Stack{
     pop(){
         return this.stack.pop();
     }
-    peek(i=length-1){
-        return this.stack[i];
+    peek(index = this.stack.length - 1){
+        return this.stack[index ];
     }
     reverse(){
         return this.stack.reverse();
     }
     isEmpty(){
-        return this.stack.length > 0;
+        return !(this.stack.length > 0);
     }
     displayStack(){
         return this.stack.join(" ");
@@ -57,7 +57,7 @@ class Stack{
     get length(){
         return this.stack.lenght;
     }
-}
+}  
 
 let myStack = new Stack();
 myStack.push('One');
