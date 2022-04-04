@@ -101,6 +101,16 @@ Array.prototype.unique = function(){
   },[])
 }
 // You code goes here
+refactor 
+
+Array.prototype.unique = function (){
+  return this.reduce((acc,cv) =>{
+    if (!acc.includes(cv)){
+      acc.push(cv);
+    }
+    return acc;
+  },[])
+};
 
 // Test to check the shuffle method (It will return different output every time you call)
 let num = [1, 2, 3, 4, 2, 3, 6, 7, 7];
@@ -125,6 +135,17 @@ return acc
 
 // You code goes here
 
+refactor 
+
+Array.prototype.intersection = function (arr){
+  return this.reduced((acc,cv) =>{
+    if (arr.includes(cv)){
+      acc.push(cv);
+    }
+    return acc;
+  } , []).unique();
+};
+
 // Test to check the shuffle method (It will return different output every time you call)
 console.log(num.intersection([2, 7, 11, 32])); // [2, 7]
 console.log(strings.intersection('heyworld'.split(''))); // ['h', 'e', 'o', 'w', 'r', 'l', 'd']
@@ -142,6 +163,19 @@ Array.prototype.chunk = function(a=1){
   }return arr
   
   }
+
+  refactor 
+
+  Array.prototype.chunk = function (size = 1){
+    let arr =[...this];
+    let len = math.floor(arr.length/size);
+    let final = [];
+    for(let i = 0; i <= len ; i++){
+      let chunk = arr.splice(0,size);
+      final.push(chunk);
+    }
+    return final.filter((elm) => elm.length);
+  };
 
 // You code goes here
 
