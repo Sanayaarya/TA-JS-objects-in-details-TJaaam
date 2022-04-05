@@ -80,6 +80,7 @@ refactor
     }
     markBookAsRead(){
       this.isRead = true;
+      this.finishedDate = Date.now();
     }
   }
 
@@ -105,13 +106,20 @@ refactor
     }
     changeCurrentBook(){
       this.currentIndexBook = index;
-      return this.currentIndexBook;
+      return this.currentIndexBook; 
     }
   }
 
-  let book1 = new book ("to kill a Mockingbird" , "Non Fiction" )
-  let book2 = new book ("Harry potter and the philosopher's stone" "Fiction", "J.k. Rowling");
-  let book3 = new Book("The Lord of the Rings");
+  let book1 = new Book ("To kill a Mockingbird" , "Non Fiction" )
+  let book2 = new Book ("Harry potter and the philosopher's stone" "Fiction", "J.k. Rowling");
+  let book3 = new Book("The Lord of the Rings" , "Fiction", "J.R.R. Tolkien");
+  let book4 = new Book("The Great Gatsby" , "Fiction" , "F. Scott Fitzgeraid" )
+  let book5 = new Book("Pride and Prejudice" , "Non Fiction" , "Harper Lee")
+
+
+  let library = new BookList();
+
+  library.add([book1, book2 , book3 , book4, book5]); 
 
 ```
 
