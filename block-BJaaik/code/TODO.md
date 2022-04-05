@@ -19,49 +19,51 @@ class person{
     this.gender = gender;
   };
   eat(){
-    alert("I am Eating")
+    console.log(`${this.name} can eat!`)
   }
   sleep(){
-    alert("I am Sleeping")
+    console.log(`${this.name} can sleep!`)
   }
   walk(){
-    alert("I am Walking")
+    console.log(`${this.name} can walk!`)
   }
 }
 
 class player extends person{
-  constructor(sportsName){
-   this.sportsName = sportsName;
+  constructor(name,age,gender,sportsName){
+    super(name,age,gender);
+    this.sportsName = sportsName;
 }
   play(){
-  alert(`I am playing ${this.sportsName}`)
+     console.log(`${this.name} can play!`)
   }
 }
 
 class teacher extends person{
-  constructor(instituteName){
-   this.institudeName = institudeName
+  constructor(name, age , gender,instituteName){
+   this.institudeName = institudeName ;
   }
     teach(){
-      alert(`I am teaching in ${institudeName}`)
+      console.log(`${this.name} can teach!`)
     }
 }
 
 class artist extends person{
-  constructor(kind){
+  constructor(name,age,gender,kind){
+    super(name,age,gender)
     this.kind = kind;
   }
-   art(){
-     alert(`I create ${this.kind} kind of art`)
+   createart(){
+     console.log(`${this.name} can create art of ${this.kind}`)
    }
 }
 
-class teamName extends player{
-  constructor(playCircket){
-    this.playCircket = playCircket;
+class circketer extends player{
+  constructor(name,age,gender,sportsName){
+    this.teamName = teamName;
   }
-  team(){
-    alert(`I am team of ${playCirket}`)
+  playCircket(){
+    console.log(`${this.name} can play circket!`)
   }
 }
 
