@@ -109,7 +109,9 @@ refactor
     }
   }
 
-  let book1 = new book ("")
+  let book1 = new book ("to kill a Mockingbird" , "Non Fiction" )
+  let book2 = new book ("Harry potter and the philosopher's stone" "Fiction", "J.k. Rowling");
+  let book3 = new Book("The Lord of the Rings");
 
 ```
 
