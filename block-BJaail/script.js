@@ -91,6 +91,6 @@ function handleSubmit(event){
   nameElm.value = '';
   authorElm.value = '';
   imageElm.value = '';
-} 
+};
 
 form.addEventListener('submit',handleSubmit); 
