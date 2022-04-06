@@ -21,4 +21,4 @@ class Book{
       let tr = document.createElement("tr");
       let td = document.createElement("td");
   }
-}
+};
