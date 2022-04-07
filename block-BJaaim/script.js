@@ -121,6 +121,6 @@ function init(){
     showResult.addEventListener('click', () => {
     alert(`Your Score is ${quiz.score}`);
     })
-};
+}
 
 init();
